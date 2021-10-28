@@ -37,7 +37,7 @@ class FlightBO
         });
         return [
             'flights'=>$flights,
-            'groups'=>$groups->orderBy('totalPrice','ASC'),
+            'groups'=>$groups->sortBy('totalPrice'),
             'totalGroups'=>$groups->count(),
             'totalFlights'=>$flights->count(),
             'cheapestPrice'=>$cheapest->price,
