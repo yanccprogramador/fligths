@@ -8,7 +8,7 @@ class FlightBO
 {
     //
     private function getFlights(){
-        return collect((new RequestUtils)->request('http://prova.123milhas.net/api/flights','GET'));
+        return collect((new RequestUtils)->request(\env('URL_123MILHAS'),'GET'));
     }
     public function makeGroups()
     {
